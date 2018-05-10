@@ -16,9 +16,7 @@ public class NotifyPersonServiceTest {
 	
 	@Before
 	public void setup() {
-		//emailService = new EmailService();
 		emailService = Mockito.mock(EmailService.class);
-		
 		notifyPersonService = new NotifyPersonService(emailService);
 	}
 	
@@ -32,7 +30,7 @@ public class NotifyPersonServiceTest {
 		//
 		System.out.println(message);
 		//Assert
-		assertNotNull(message);
+		assertNull(message);
 	}
 
 }
